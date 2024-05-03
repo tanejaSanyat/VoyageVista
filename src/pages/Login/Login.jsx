@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import { Link, useHistory, useLocation } from "react-router-dom";
+import { Link, useHistory, useLocation,Redirect} from "react-router-dom";
 import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
 import { useAuth } from "../../components/Context/AuthContext";
 import SocialLogin from "../../components/SocialLogin/SocialLogin";
@@ -8,7 +8,8 @@ import SocialLogin from "../../components/SocialLogin/SocialLogin";
 const Login = () => {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
-  const { login } = useAuth();
+  const { login,currentUser } = useAuth();
+  console.log(currentUser);
 
   const history = useHistory();
   const location = useLocation();
@@ -33,7 +34,7 @@ const Login = () => {
   };
 
   return (
-    <>
+    !currentUser ? <>
       <Breadcrumbs title="Login" />
       <div className="container">
         <div
@@ -98,7 +99,7 @@ const Login = () => {
           </div>
         </div>
       </div>
-    </>
+    </> : <Redirect to = "/dashboard"/>
   );
 };
 

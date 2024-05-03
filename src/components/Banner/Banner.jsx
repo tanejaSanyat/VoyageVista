@@ -20,7 +20,7 @@ const Banner = () => {
         </p>
         <div className="mt-12">
           <Link
-            to="#"
+            to="/login"
             className="bg-primary border border-primary text-white px-3 py-2 font-medium rounded hover:bg-transparent hover:text-primary transition"
           >
             GET IN TOUCH
