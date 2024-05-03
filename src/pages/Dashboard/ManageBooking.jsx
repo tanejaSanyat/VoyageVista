@@ -1,7 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useLocation, useParams } from "react-router-dom";
-import { useAuth } from "../../components/Context/AuthContext";
 import Sidebar from "../../components/Dashboard/Sidebar";
 import Message from "../../components/Message/Message";
 const ManageBooking = () => {
