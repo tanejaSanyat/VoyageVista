@@ -10,7 +10,6 @@ const ManageBooking = () => {
   const [isLoading, setLoading] = useState(true);
   const location = useLocation();
   const { id } = useParams();
-  const { currentUser } = useAuth();
 
   useEffect(() => {
     setMessage(location.message);

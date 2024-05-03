@@ -7,7 +7,7 @@ import SocialLogin from "../../components/SocialLogin/SocialLogin";
 
 const Register = () => {
   const [error, setError] = useState("");
-  const [loading, setLoading] = useState(false);
+  const [, setLoading] = useState(false);
   const { signUp } = useAuth();
 
   const history = useHistory();
