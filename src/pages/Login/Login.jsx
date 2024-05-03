@@ -7,9 +7,8 @@ import SocialLogin from "../../components/SocialLogin/SocialLogin";
 
 const Login = () => {
   const [error, setError] = useState("");
-  const [loading, setLoading] = useState(false);
+  const [, setLoading] = useState(false);
   const { login,currentUser } = useAuth();
-  console.log(currentUser);
 
   const history = useHistory();
   const location = useLocation();

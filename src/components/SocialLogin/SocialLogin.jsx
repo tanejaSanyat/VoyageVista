@@ -3,8 +3,8 @@ import { useHistory, useLocation } from "react-router-dom";
 import { useAuth } from "../Context/AuthContext";
 
 const SocialLogin = ({ title }) => {
-  const { googleSignUp, githubSignUp } = useAuth();
-  const [loading, setLoading] = useState(false);
+  const { googleSignUp } = useAuth();
+  const [,setLoading] = useState(false);
   const [error, setError] = useState("");
 
   const history = useHistory();

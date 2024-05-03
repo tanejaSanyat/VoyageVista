@@ -14,8 +14,6 @@ const SingleTour = () => {
   const {
     register,
     handleSubmit,
-    reset,
-    watch,
     formState: { errors },
   } = useForm();
 
